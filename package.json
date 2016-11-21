@@ -1,0 +1,47 @@
+{
+  "name": "Frontend standard",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "bootstrap-sass": "^3.3.7",
+    "browser-sync": "^2.14.0",
+    "del": "^2.2.2",
+    "font-awesome": "^4.6.3",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-changed": "^1.3.2",
+    "gulp-concat": "^2.6.0",
+    "gulp-htmlhint": "^0.3.1",
+    "gulp-include": "^2.3.1",
+    "gulp-inject": "^4.1.0",
+    "gulp-jsbeautifier": "^2.0.3",
+    "gulp-jshint": "^2.0.1",
+    "gulp-load-plugins": "^1.2.4",
+    "gulp-merge-json": "^0.6.0",
+    "gulp-prettify": "^0.5.0",
+    "gulp-pug": "^3.1.0",
+    "gulp-pug-inheritance": "^0.2.1",
+    "gulp-sass": "^2.3.2",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-w3cjs": "^1.2.0",
+    "gulp-watch": "^4.3.9",
+    "htmlhint-stylish": "^1.0.3",
+    "install": "^0.8.1",
+    "jquery": "2.2.1",
+    "jshint": "^2.9.2",
+    "npm": "^3.10.6",
+    "owl.carousel": "^2.2.0",
+    "pug": "^2.0.0-beta6",
+    "run-sequence": "^1.2.2"
+  },
+  "dependencies": {
+    "gulp-filelist": "^0.5.0",
+    "owl.carousel": "^2.2.0"
+  }
+}

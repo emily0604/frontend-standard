@@ -1,0 +1,127 @@
+doctype html
+html
+  body
+    .wrapper
+      h1 Frontend Standard
+      h2 Content
+      ol
+        li
+          a(href='#syntax-formatting') Syntax & formatting
+        li
+          a(href='#name-convention') Name conventions
+        li
+          a(href='#commenting') Commenting
+        li Architecture
+        li Responsive Web Design & breakpoints
+        li Variables
+        li Extend
+        li Mixins
+        li Conditional statements
+        li Loops
+        li Warnings and Errors
+        li Tools
+
+      h3#syntax-formatting Syntax & Formatting
+      ul
+        li two spaces indents, no tabs;
+        li ideally, 80-characters wide lines;
+        li properly written multi-line CSS rules;
+        li meaningful use of whitespace.
+
+      h4 Strings
+
+      h5 Quotes
+      | Using single quote
+      pre.prettyprint
+        code.lang-css
+          :code
+              // Yep
+              $direction: 'left';
+
+              // Nope
+              $direction: left;
+
+
+      h5 String as CSS value
+      | Specific CSS values (identifiers) such as
+      code initial
+      |or
+      code sans-serif
+      |require not to be quoted.
+
+      h5 URL
+      |URLs are quoted as well
+
+      h4 Numbers
+      |Numbers shoud be display leading zeros before a decimal value less than one. Never display trailing zero
+      pre.prettyprint
+        code.lang-css
+          :code
+            // Yep
+            .foo {
+              padding: 2em;
+              opacity: 0.5;
+            }
+
+            // Nope
+            .foo {
+              padding: 2.0em;
+              opacity: .5;
+            }
+      h4 List
+      |either inlined or multilines;
+
+      h4 Map
+      ul
+        li Space after colon
+        li Open brace (#[code (]) at the same line as the colon (#[code :])
+        li quoted keys iff they arre strings
+        li each key/value pair on its own new line
+        li comma (#[code ,]) at the end of each key/value
+        li trailing comma (#[code ,]) on the last item.
+
+      h4 Selector Nested
+
+      h3#name-convention Name Convention
+      ul
+        li variables
+        li functions
+        li mixins
+      pre.prettyprint
+        code.lang-scss
+          :code
+            $vertical-rhythm-baseline: 1.5rem;
+
+            @mixin size($width, $height: $width) {
+              // …
+            }
+
+            @function opposite-direction($direction) {
+              // …
+            }
+      h3#commenting Commenting
+      ul
+        li The structure and/or role of a file
+        li The goal of a ruleset
+        li The idea behind a magic number
+        li The reason for a CSS declaration
+        li The order of CSS declarations
+        li The thought process behind a way of doing things
+      h4 Writting comments
+        pre
+          code.lang-scss
+            :code
+              /**
+               * Helper class to truncate and add ellipsis to a string too long for it to fit
+               * on a single line.
+               * 1. Prevent content from wrapping, forcing it on a single line.
+               * 2. Add ellipsis at the end of the line.
+               */
+              .ellipsis {
+                white-space: nowrap; /* 1 */
+                text-overflow: ellipsis; /* 2 */
+                overflow: hidden;
+              }
+
+
+

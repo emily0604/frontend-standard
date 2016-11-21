@@ -1,0 +1,75 @@
+mixin header(page)
+  .header
+    .container.header-global
+      //- Header
+      .row
+        h1.col-md-2.col-xs-5.logo
+          a.logo-img(href='#')
+            img(src='../images/logo.png', alt='コラントッテＣＳＳ')
+          a.btn-menubar(href='javascript:void(0)')
+        .col-md-5.hidden-sm.hidden-xs
+          .wrapper-menu
+            ul.menu-main
+              if page == 'concept'
+                li.active
+                  a(href='#') CSSとは
+              else 
+                li
+                  a(href='#') CSSとは
+              if page == 'sale'
+                li.active
+                  a(href='#') 商品
+              else 
+                li
+                  a(href='#') 商品
+              if page == 'service'
+                li.active
+                  a(href='#') サービス
+              else 
+                li
+                  a(href='#') サービス
+        .col-md-5.col-xs-7
+          ul.menu-company.hidden-sm.hidden-xs
+            li
+              a(href='#') お申込み
+            li
+              a(href='#') ショッピングガイド
+            li
+              a(href='#') お問い合わせ
+          ul.menu-user.hidden-sm.hidden-xs
+            li.link-my-page
+              a(href='#')
+                i.fa.fa-user(aria-hidden="true")
+                | マイページ
+            li
+              a(href='#') お申込み
+            li.link-purchase
+              a(href='#')
+                i.fa.fa-shopping-bag(aria-hidden='true')
+                span.purchase-number 0
+          ul.mobile-user.visible-xs.visible-sm
+            li
+              a(href="#")
+                i.fa.fa-user(aria-hidden="true")
+            li.link-purchase.active
+              a(href='#')
+                i.fa.fa-shopping-bag(aria-hidden='true')
+                span.purchase-number 0
+      //- Dropdown Mobile Menu
+  .dd-menu
+    ul
+      li.active
+        a(href='#')
+          | コンセプト
+      li
+        a(href='#')
+          | 商品
+      li
+        a(href='#')
+          | サービス
+      li
+        a(href='#')
+          | お問い合わせ
+      li
+        a(href='#')
+          | ショッピングガイド

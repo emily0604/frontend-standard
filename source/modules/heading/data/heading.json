@@ -1,0 +1,85 @@
+{
+  "heading": {
+    "main": {
+      "title": "お子様からお年寄りまで、以下のような様々なシーンで大切な人を守ります！"
+    },
+    "service": {
+      "title": "サービス詳細説明"
+    },
+    "cart": {
+      "title": "ショッピングカート"
+    },
+    "signin": {
+      "title": "サインイン"
+    },
+    "userinfo": {
+      "title": "契約情報"
+    },
+    "use": {
+      "title": "サイトのご利用にあたって"
+    },
+    "tokusho": {
+      "title": "特定商取引に基づく表記"
+    },
+    "withdraw": {
+      "title": "クレジットカード以外のお支払い方法"
+    },
+    "sale": {
+      "title": "商品購入"
+    },
+    "password": {
+      "title": "ショッピングカート"
+    },
+    "useredit": {
+      "title": "契約情報"
+    },
+    "insurance": {
+      "title": "保険について"
+    },
+    "guide": {
+      "title": "ショッピングガイド"
+    },
+    "informationedit":{
+      "title":"カード情報変更"
+    },
+    "purchaserinfo": {
+      "title": "購入者情報"
+    },
+    "purchaseredit": {
+      "title": "購入者情報"
+    },
+    "company": {
+      "title": "会社概要"
+    },
+    "concept": {
+      "title": "CSSとは"
+    },
+    "faq": {
+      "title": "よくあるご質問"
+    },
+    "forgetpasswordsent": {
+      "title": "パスワード再送"
+    },
+    "changepassword": {
+      "title": "パスワード変更"
+    },
+    "errorpage": {
+      "title": "エラー"
+    },
+    "contactus": {
+      "title": "お問い合わせ"
+    },
+    "privacy": {
+      "title": "プライバシーポリシー"
+    },
+    "forgetpassword": {
+      "title": "パスワード変更手続き"
+    },
+    "register": {
+      "title": "お客様情報入力"
+    },
+    "cartnoitem": {
+      "title": "ショッピングカート"
+    }
+  }
+}
