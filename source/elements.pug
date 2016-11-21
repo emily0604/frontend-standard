@@ -1,0 +1,479 @@
+include modules/heading/heading
+
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(name='description', content='')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    title UI Elements
+    link(rel='stylesheet', href='css/main.css')
+  body
+    // Common button
+    .container-fluid.collection-btn
+      .row
+        .container-fluid
+          .col-md-4
+            h2.text-center  Button Size
+            .row
+              h2 btn-xs (h: 40px; padding: 30px)
+              button.btn.btn-xs サインイン
+            .row
+              h2 btn-sm (h: 50px; padding: 40px)
+              button.btn.btn-sm サインイン
+            .row
+              h2 btn (h: 60px; padding: 60px) (default)
+              button.btn サインイン
+            .row
+              h2 btn-md (h: 60px; padding: 30px) (special)
+              button.btn.btn-md サインイン
+            .row
+              h2 btn-lg (h: 70px; padding: 60px)
+              button.btn.btn-lg サインイン          
+          .col-md-4
+            h2.text-center  Button color
+            .row
+              h2 btn (default)
+              button.btn サインイン
+            .row
+              h2 btn-white
+              button.btn.btn-white サインイン
+            .row
+              h2 btn-green
+              input.btn.btn-green(type="button",value="サインイン")
+            .row
+              h2 btn-black
+              button.btn.btn-black サインイン
+          .col-md-4
+            h2.text-center  Button width
+              .row
+                h2 btn-fw (button full width)
+                button.btn.btn-fw.btn-white サインイン
+              .row
+                h2 icon right (button have icon)
+                button.btn.btn-green
+                  | サインイン
+                  i.fa.fa-caret-right.right(aria-hidden='true')
+              .row
+                h2 icon left (button have icon)
+                button.btn.btn-black
+                  i.fa.fa-caret-left.left(aria-hidden='true')
+                  | サインイン
+              .row
+                h2 btn-trans (button have bg transparent)
+                button.btn.btn-trans サインイン
+                  
+      .row
+        .col-md-4
+          .row
+            h2.text-center Default Padding
+          .row
+            button.btn-colla.btn-green サインイン
+          .row
+            button.btn-colla.btn-white お問い合わせ
+          .row
+            button.btn-colla.btn-green 詳しく見る
+          .row
+            button.btn-colla.btn-green
+              | 次へ
+              i.fa.fa-caret-right.right(aria-hidden='true')
+          .row
+            button.btn-colla.btn-transparent 詳しく見る
+          .row
+            button.btn-colla.btn-green 様々な活用シーツ
+          .row
+            button.btn-colla.btn-green 住所検索
+          .row
+            button.btn-colla.btn-green
+              | カード情報変更
+              i.fa.fa-pencil-square-o.right(aria-hidden='true')
+          .row
+            button.btn-colla.btn-black カードを空にする
+          .row
+            button.btn-colla.btn-green サービス詳細を見る
+          .row
+            button.btn-colla.btn-green TOPへ戻る
+          .row
+            button.btn-colla.btn-green 詳細
+        .col-md-4
+          // 230
+          .row
+            h2.text-center Fixed width 230
+          .row
+            button.btn-colla.btn-fixed-230.btn-green 保険について
+          .row
+            button.btn-colla.btn-fixed-230.btn-green
+              | 編集
+              i.fa.fa-pencil-square-o.right(aria-hidden='true')
+          .row
+            button.btn-colla.btn-fixed-230.btn-green
+              | 送信
+          .row
+            h2.text-center Fixed width 360
+          .row
+            button.btn-colla.btn-fixed-360.btn-green
+              | お申込み用紙(PDF)
+              i.fa.fa-file-pdf-o.right(aria-hidden='true')
+          .row
+            button.btn-colla.btn-fixed-360.btn-black
+              | 口座振替用紙(PDF)
+              i.fa.fa-file-pdf-o.right(aria-hidden='true')
+        // 270
+        .col-md-4
+          .row
+            h2.text-center Fixed Width 270
+          .row
+            button.btn-colla.btn-fixed-270.btn-black
+              | キャンセル
+              i.fa.fa-times-circle.right(aria-hidden='true')
+          .row
+            button.btn-colla.btn-fixed-270.btn-green
+              | ご入力内容確認
+              i.fa.fa-caret-right.right(aria-hidden='true')
+          .row
+            button.btn-colla.btn-fixed-270.btn-green
+              | 保存
+              i.fa.fa-floppy-o.right(aria-hidden='true')
+          .row
+            button.btn-colla.btn-fixed-270.btn-green
+              | 次へ
+              i.fa.fa-caret-right.right(aria-hidden='true')
+          .row
+            button.btn-colla.btn-fixed-270.btn-green
+              | カード情報入力
+              i.fa.fa-caret-right.right(aria-hidden='true')
+          .row
+            button.btn-colla.btn-fixed-270.btn-black
+              i.fa.fa-caret-left.left(aria-hidden='true')
+              |             お客様情報を修正する
+          .row
+            button.btn-colla.btn-fixed-270.btn-black
+              i.fa.fa-caret-left.left(aria-hidden='true')
+              |             戻る
+    // ./Common button
+    // Accordion
+    .container.collection-qa
+      .row
+        h1.text-center Expanded Elements
+      .row
+        .col-md-12
+          h4 Collapsible
+        .col-md-12
+          .row-qa.collapsible
+            .question
+              a.collapsed(href='#answer-1', data-toggle='collapse')
+                span.icon-round 1
+                p 決済方式はクレジットカードのみでしょうか？
+                span.icon-dropdown
+            #answer-1.answer.collapse
+              .content
+                p 恐れはいりますが、クレジットカード決済のみとさせていただいております。
+          .row-qa.collapsible
+            .question
+              a.collapsed(href='#answer-2', data-toggle='collapse')
+                span.icon-round 2
+                p 決済方式はクレジットカードのみでしょうか？
+                span.icon-dropdown
+            #answer-2.answer.collapse
+              .content
+                p 恐れはいりますが、クレジットカード決済のみとさせていただいております。
+          .row-qa.collapsible
+            .question
+              a.collapsed(href='#answer-3', data-toggle='collapse')
+                span.icon-round 3
+                p 決済方式はクレジットカードのみでしょうか？
+                span.icon-dropdown
+            #answer-3.answer.collapse
+              .content
+                p 恐れはいりますが、クレジットカード決済のみとさせていただいております。
+      .row
+        .col-md-12
+          h4 Table
+        .col-md-6
+          .row-qa.uncollapsible
+            .question
+              span.icon-round Q
+              p 決済方式はクレジットカードのみでしょうか？
+            .answer
+              .content
+                p 恐れはいりますが、クレジットカード決済のみとさせていただいております。
+                span.icon-round A
+        .col-md-6
+          .row-qa.uncollapsible
+            .question
+              span.icon-round Q
+              p 決済方式はクレジットカードのみでしょうか？
+            .answer
+              .content
+                p 恐れはいりますが、クレジットカード決済のみとさせていただいております。
+                span.icon-round A
+        .col-md-6
+          .row-qa.uncollapsible
+            .question
+              span.icon-round Q
+              p 決済方式はクレジットカードのみでしょうか？
+            .answer
+              .content
+                p 恐れはいりますが、クレジットカード決済のみとさせていただいております。
+                span.icon-round A
+        .col-md-6
+          .row-qa.uncollapsible
+            .question
+              span.icon-round Q
+              p 決済方式はクレジットカードのみでしょうか？
+            .answer
+              .content
+                p 恐れはいりますが、クレジットカード決済のみとさせていただいております。
+                span.icon-round A
+    // ./Accordion
+    // Inputs
+    .container.collection-input
+      .row
+        .col-md-12
+          form.form-horizontal
+            .form-group
+              .col-md-5.left
+                label.control-label
+                  | クレジットカード番号
+                  span.span-required 必須
+              .col-md-7.right
+                input.form-control(type='text', value='', placeholder='full-width')
+            .form-group
+              .col-md-5.left
+                label.control-label
+                  | カード名義 (英字)
+                  span.span-required 必須
+              .col-md-7.right
+                input.form-control(type='text', value='', placeholder='full-width')
+            .form-group
+              .col-md-5.left
+                label.control-label
+                  | お支払い回数
+                  span.span-required 必須
+              .col-md-7.right
+                input.form-control.input-fixed-380(type='text', value='', placeholder='380px')
+                p.extra-note ※分割を選択した場合、カード会社規定の手数料がかかります。
+            .form-group
+              .col-md-5.left
+                label.control-label
+                  | カード期限
+                  span.span-required 必須
+              .col-md-7.right
+                input.form-control.input-fixed-210(type='text', value='', placeholder='210')
+                span.span-unit 年
+                input.form-control.input-fixed-210(type='text', value='', placeholder='210')
+                span.span-unit 月
+            .form-group
+              .col-md-7.col-md-offset-5.right
+                input.form-control.input-fixed-130(type='text', value='', placeholder='130px')
+                input.form-control.input-fixed-185(type='text', value='', placeholder='185px')
+                input.form-control.input-fixed-200(type='text', value='', placeholder='200px')
+            .form-group
+              .col-md-7.col-md-offset-5.right
+                input.form-control.input-fixed-400(type='text', value='', placeholder='400px')
+    .container
+      .col-sm-12
+        .clt-checkbox
+          input#checkbox-2.checkbox-custom(name='checkbox-2', type='checkbox')
+          label.checkbox-custom-label(for='checkbox-2') Second Choice
+        .clt-radio
+          input#radio-1.radio-custom(name='radio-group', type='radio', checked='')
+          label.radio-custom-label(for='radio-1') First Choice
+        .clt-radio
+          input#radio-2.radio-custom(name='radio-group', type='radio')
+          label.radio-custom-label(for='radio-2') Second Choice
+        .clt-radio
+          input#radio-3.radio-custom(name='radio-group', type='radio')
+          label.radio-custom-label(for='radio-3') Third Choice
+      .col-sm-12
+        .col-sm-3
+          .clt-select.form-control
+            select
+              option 1
+    // ./Inputs
+    //- Step by Step
+    section.section
+      .container
+        .step-by-step.clearfix
+          .steps
+            .list-step.success
+              .step
+                .circle 1
+                p 購入者情報
+            .list-step.success
+              .step
+                .circle 2
+                p 使用者情報
+            .list-step.active
+              .step
+                .circle 3
+                p 規約
+            .list-step
+              .step
+                .circle 4
+                p 確認
+          .last-step
+            .step
+              .circle 5
+              p カード情報
+    // Heading
+    .container-fluid
+      .col-sm-12
+        .heading
+          | This is heading title of a specified page
+        +heading-title('This is default heading')
+        +heading-title('This is yellow color heading', 'yellow')
+        .content
+          | This is content
+    // ./Heading
+    // Carousel
+    .container-fluid
+      #sync1.image.owl-theme
+        .item
+          img.zoom-img(src='images/sale1_1.jpg', data-zoom-image='images/demo-zoom.jpg')
+        .item
+          img(src='images/sale1_2.jpg')
+        .item
+          img(src='images/sale1_3.jpg')
+        .item
+          img(src='images/sale1_4.jpg')
+        .item
+          img(src='images/sale1_5.jpg')
+        .item
+          img(src='images/sale1_5.jpg')
+      #sync2.image-list.owl-carousel.owl-theme.has-control
+        .item
+          img(src='images/sale1_1.jpg')
+        .item
+          img(src='images/sale1_2.jpg')
+        .item
+          img(src='images/sale1_3.jpg')
+        .item
+          img(src='images/sale1_4.jpg')
+        .item
+          img(src='images/sale1_5.jpg')
+        .item
+          img(src='images/sale1_5.jpg')
+    // .Carousel
+    // Dropdown
+    .container-fluid
+      .dropdown.clt-dropdown
+        button.btn.btn-primary.dropdown-toggle(type='button', data-toggle='dropdown')
+          | ブラック
+        ul.dropdown-menu
+          li
+            a(href='#') ブラック
+          li
+            a(href='#') イエロー
+          li
+            a(href='#') ブラック
+          li
+            a(href='#') ライトグリーン
+          li
+            a(href='#') レッド
+    // .Dropdown
+    // Image list
+    .container-fluid
+      .image-list
+        img(src='images/sale1_6.jpg')
+        img(src='images/sale1_7.jpg')
+        img(src='images/sale1_8.jpg')
+        img(src='images/sale1_9.jpg')
+        img(src='images/sale1_10.jpg')
+    // .Image list
+    .container-fluid
+      .clt-title
+        | 商品詳細
+    // Navigation Tabs
+    .container.collection-nav
+      .row
+        .col-md-12
+          ul.nav.nav-pills.nav-trapezoid
+            li.active
+              a(data-toggle='tab', href='#menu1') ショッピング手順
+            li
+              a(data-toggle='tab', href='#menu2') お支払いについて
+            li
+              a(data-toggle='tab', href='#menu3') 商品のお届けについて
+          .tab-content.tab-content-custom
+            #menu1.tab-pane.fade.in.active
+              .tab-section.tab-section-white
+                h5.heading-left-strike 1. カートに入れる
+              .tab-section.tab-section-gray
+                p
+                  | 購入する商品が決まったら、商品のそばにある「カートに入れる」ボタンをクリックしていただくことで商品がカート（ショッピングカート）に入ります。カートに入れる際に「カラー/サイズ」「数量」を選択してください。
+                p ※各ページのデザインによりボタンの色やサイズが異なります。
+                img.img-responsive(src='images/shopping-guide.png', alt='')
+              .tab-section.tab-section-white
+                h5.heading-left-strike 2. 決済方法について
+              .tab-section.tab-section-gray
+                p.heading-left-square クレジットカードでのお支払い
+                p 各クレジットカード会員規約に基づき、お客様の口座より代金自動引落させていただきます。カード名義人・カード会社・カード番号・カード有効期限をご入力ください。
+                p 一括払い、分割払い（2,3,5,6,10,12,15,18,20,24回)、リボ払いがご利用いただけます。
+                p 別途カード会社の定める分割手数料が必要となります。
+                p ※ご契約のカードにより分割・リボ払いがご利用いただけない場合がございます。 詳しくはカード会社へお問い合わせください。
+                p ※一回のご購入は10万円(税込)を限度とさせていただきます。
+                p ※ご利用カードは、お客さまご本人名義のものに限ります。
+                p ご利用可能なクレジットカード :
+                h5.heading-left-square その他のお支払い方法はこちら
+                ul.list-unstyled
+                  li
+                    span.dot-bullet
+                    p 口座振替でのお支払い
+                    p Dummy text Dummy text Dummy text Dummy text
+                  li
+                    span.dot-bullet
+                    p コンビニ/郵便局でのお支払い
+                    p Dummy text Dummy text Dummy text Dummy text
+                  li
+                    p ご希望の方はフリーダイヤルへお問い合わせください。（0120-13-0001　/24時間）　←表記考れる
+            #menu2.tab-pane.fade
+              h3 Menu 2
+            #menu3.tab-pane.fade
+              h3 Menu 3
+    // clt-table
+    .container
+      .clt-table
+        h1.text-center Table
+        table.col-md-12(border='1')
+          thead
+            tr
+              th.col-md-5
+              th.col-md-7
+          tbody
+            tr
+              td ショップ名
+              td コラントッテ
+            tr
+              td 販売業者
+              td 株式会社コラントッテ
+            tr
+              td 販売責任者
+              td 小松  由美子
+            tr
+              td 所在地
+              td 〒542-0081  大阪府大阪市中央区南船場2丁目10番26号 コラントッテビル
+
+    // Group select inline form
+    section.section.container
+      .row.group-select
+        .group.group-1.col-xs-12.col-sm-4.nopadding.display-flex-center
+          .clt-select.form-control
+            select
+              option 1
+          span.label-text 年
+        .group.group-2.col-xs-12.col-sm-4.nopadding.display-flex-center
+          .clt-select.form-control
+            select
+              option 1
+          span.label-text 月
+        .group.group-3.col-xs-12.col-sm-4.nopadding.display-flex-center
+          .clt-select.form-control
+            select
+              option 1
+          span.label-text 日
+    // Page heading
+    .row
+      +heading(heading.service)
+    // phone-box
+    script(src='js/main.js', charset='utf-8')

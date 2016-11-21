@@ -1,0 +1,9 @@
+mixin heading(data)
+  .heading-page
+    .container= data.title
+
+mixin heading-title(text, color)
+  -  var className = 'heading'
+  if  color
+    -  className = className + ` heading-${color}`
+  h2(class= className)= text

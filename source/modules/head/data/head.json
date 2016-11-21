@@ -1,0 +1,97 @@
+{
+  "head": {
+    "home": {
+      "title": "Main",
+      "mobile": true,
+      "meta": "default",
+      "og": "default"
+    },
+    "guide": {
+      "title": "12 Guide",
+      "mobile": true,
+      "meta": "default",
+      "og": "default"
+    },
+    "service": {
+      "title": "02 Service Page"
+    },
+    "cart": {
+      "title": "03-cart"
+    },
+    "signin": {
+      "title": "04-1-signin"
+    },
+    "userinfo": {
+      "title": "04-2-user-info"
+    },
+    "use": {
+      "title": "13-use"
+    },
+    "tokusho": {
+      "title": "14-tokusho"
+    },
+    "withdraw": {
+      "title": "16-withdraw"
+    },
+    "sale": {
+      "title": "03-1-sale"
+    },
+    "password": {
+      "title": "04-4-forget-password"
+    },
+    "useredit": {
+      "title": "04-3-user-edit"
+    },
+    "insurance": {
+      "title": "07-insurance"
+    },
+    "infomationedit":{
+      "title":"04-7-information-edit"
+    },
+    "purchaserinfo": {
+      "title": "04-5-perchaser-information"
+    },
+    "purchaseredit": {
+      "title": "04-6-purchaser-information-edit"
+    },
+    "company": {
+      "title": "05-company"
+    },
+    "concept": {
+      "title": "15-concept"
+    },
+    "faq": {
+      "title": "09-faq"
+    },
+    "forgetpasswordsent": {
+      "title": "04-4-forget-password-sent"
+    },
+    "changepassword": {
+      "title": "04-8-change-password"
+    },
+    "errorpage": {
+      "title": "17-404-error"
+    },
+    "privacy": {
+      "title": "06-privacy"
+    },
+    "forgetpassword": {
+      "title": "04-9-forget-password"
+    },
+    "register": {
+      "title": "03-registration"
+    },
+    "step1": {
+      "title": "03-3-Registration-Step-1"
+    },
+    "step2": {
+      "title": "03-3-Register-Step-2"
+    },
+    "step6": {
+      "title": "03-6-Register-Finish"
+    },
+    "cartnoitem": {
+      "title": "03-2-Cart-Empty"
+    }
+  }
+}

@@ -1,0 +1,10 @@
+include modules/_page-list/_page-list
+include modules/header/header
+include modules/head/head
+
+doctype html
+html
+  +head(head.home)
+  body
+    div.page
+      +page-list(pageList.data)

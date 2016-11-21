@@ -1,0 +1,21 @@
+mixin page-list(data)
+  .container
+    h1.page-list__title Page list
+    table.table.table-striped
+      thead
+        tr
+          th #
+          th Link
+          th Name Of Screen
+      each ent, num in data
+        tr
+          th= (num + 1)
+          td
+            - if(ent.url == '')
+                a('#').page-list__link= ent.title
+            - else
+                a(href=ent.url + '.html').page-list__link= ent.title
+          td
+            - if(ent.url != '')
+                span.page-list__file-name= ent.url + '.html'
+
