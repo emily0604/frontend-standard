@@ -1,6 +1,8 @@
 'use strict';
 
 var gulp = require('gulp');
+var plumber = require('gulp-plumber');
+var gutil   = require('gulp-util');
 var $ = require('gulp-load-plugins')();
 
 var runSequence = require('run-sequence');
@@ -8,6 +10,18 @@ var browserSync = require('browser-sync').create();
 var del = require('del');
 var fs = require('fs');
 var pug = require('pug');
+
+var errorHandler = function(){
+  return gplumber(function(error){
+    var msg = error.codeFrame.replace(/\n/g, '\n    ');
+
+    gutil.log('|- ' + gutil.colors.bgRed.bold('Build Error in ' + error.plugin));
+    gutil.log('|- ' + gutil.colors.bgRed.bold(error.message));
+    gutil.log('|- ' + gutil.colors.bgRed('>>>'));
+    gutil.log('|\n    ' + msg + '\n           |');
+    gutil.log('|- ' + gutil.colors.bgRed('<<<'));
+  });
+};
 
 var
   source = 'source/',
@@ -187,6 +201,10 @@ gulp.task('compile-pug', function (cb) {
   options.pug.locals = jsonData;
 
   return gulp.src(['*.pug', '!_*.pug'], {cwd: 'source'})
+    .pipe(plumber(function(error){
+        console.log("Error happend!", error.message);
+        this.emit('end');
+    }))
     .pipe($.changed('dest', {extension: '.html'}))
     .pipe($.pugInheritance({
       basedir: "source",
@@ -198,6 +216,7 @@ gulp.task('compile-pug', function (cb) {
       this.emit('end');
     })
     .pipe($.prettify(options.htmlPrettify))
+    .pipe(plumber.stop())
     .pipe(gulp.dest(dest));
 
 })
