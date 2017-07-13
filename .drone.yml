@@ -1,5 +1,5 @@
 build:
-  image: emilyhamal
+  image: emilyhamal/demo-scss-lint
   commands:
     - framgia-ci run
 
