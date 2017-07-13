@@ -11,6 +11,8 @@ var del = require('del');
 var fs = require('fs');
 var pug = require('pug');
 
+var scssLint = require('gulp-scss-lint');
+
 var errorHandler = function(){
   return gplumber(function(error){
     var msg = error.codeFrame.replace(/\n/g, '\n    ');
@@ -45,7 +47,8 @@ var options = {
   ],
   browserSync: {
     server: {
-      baseDir: dest
+      baseDir: dest,
+      index: "links.html"
     }
   },
   htmlPrettify: {
@@ -169,7 +172,7 @@ gulp.task('cleanup', function (cb) {
 
 
 // = Build Style
-gulp.task('compile-styles',['fonts'], function (cb) {
+gulp.task('compile-styles',['fonts', 'scss-lint'], function (cb) {
   return gulp.src([
     source + '/sass/*.scss',
     '!'+ source +'/sass/_*.scss'
@@ -184,6 +187,14 @@ gulp.task('compile-styles',['fonts'], function (cb) {
   }))
   .pipe(gulp.dest(dest + '/css'))
   .pipe(browserSync.stream());
+})
+
+gulp.task('scss-lint', function (cb) {
+  return gulp.src([
+    source + '/sass/*.scss',
+    source + '/sass/**/*.scss'
+  ])
+  .pipe(scssLint())
 })
 
 // = Build HTML
