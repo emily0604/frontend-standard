@@ -1,0 +1,4 @@
+project_type: ruby
+test:
+  scss-lint:
+    command: scss-lint --require=scss_lint_reporter_checkstyle --format=Checkstyle --out=.framgia-ci-reports/scss-lint.xml source/sass; ec=$?; if [ $ec -eq 0 -o $ec -eq 1 ]; then (exit 0); else (exit $ec); fi;

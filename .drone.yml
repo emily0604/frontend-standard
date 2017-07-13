@@ -1,0 +1,8 @@
+build:
+  image: emilyhamal
+  commands:
+    - framgia-ci run
+
+cache:
+  mount:
+    - .git

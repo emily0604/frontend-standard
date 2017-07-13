@@ -1,3 +1,7 @@
 node_modules/
 dest/
 tmp/
+
+.framgia-ci-reports/**
+!.framgia-ci-reports/.keep
+.framgia-ci-result.temp.yml
