@@ -1,0 +1,40 @@
+//
+// Abstracts :: Mixins
+////////////////////////////////////////////////////////////////////////
+
+/// Responsive breakpoint manager
+/// @access public
+/// @param {String} $breakpoint - Breakpoint
+/// @requires $breakpoints
+$breakpoints: (
+  'smallphone-and-down': (max-width: 480px),
+  'phone-and-down': (max-width: 767px),
+  'tablet-and-down': (max-width: 991px),
+  'desktop-and-down': (max-width: 1199px),
+  'large-desktop-and-down': (max-width: 1350px),
+  'phone-and-up': (min-width: 768px),
+  'tablet-and-up': (min-width: 992px),
+  'desktop-and-up': (min-width: 1200px),
+  'tablet-and-desktop': (min-width: 992px) and (max-width: 1199px),
+  'phone-and-tablet': (min-width: 768px) and (max-width: 991px),
+  'smallphone-and-phone': (min-width: 480px) and (max-width: 767px)
+);
+
+@mixin respond-to($breakpoint) {
+  $raw-query: map-get($breakpoints, $breakpoint);
+
+  @if $raw-query {
+    $query: if(
+      type-of($raw-query) == 'string',
+      unquote($raw-query),
+      inspect($raw-query)
+    );
+
+    @media #{$query} {
+      @content;
+    }
+  } @else {
+    @error 'No value found for `#{$breakpoint}`. '
+         + 'Please make sure it is defined in `$breakpoints` map.';
+  }
+}

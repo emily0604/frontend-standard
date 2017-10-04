@@ -1,0 +1,13 @@
+mixin sidebar(data)
+  .sidebar
+    h2.sidebar__user-avatar
+      a(href="#") User avatar image
+    p.sidebar__username Emily Doe
+    ul.nav.nav-stacked.sidebar__nav
+      each item in data
+        li.nav-item
+          a.nav-link(href='#')
+            i(class=`anticon icon-${item.icon}`)
+            span.text= item.title
+    h4.sidebar__footer
+      a(href='#') Logo

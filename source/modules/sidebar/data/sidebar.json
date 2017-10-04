@@ -1,0 +1,26 @@
+{
+  "sidebar": {
+    "data": [
+      {
+        "title": "User profile",
+        "icon": "user"
+      },
+      {
+        "title": "Notifications",
+        "icon": "bells"
+      },
+      {
+        "title": "Billings",
+        "icon": "credit-card"
+      },
+      {
+        "title": "Security",
+        "icon": "lock"
+      },
+      {
+        "title": "Settings",
+        "icon": "setting"
+      }
+    ]
+  }
+}

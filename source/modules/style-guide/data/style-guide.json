@@ -1,0 +1,128 @@
+{
+  "styleGuide": {
+    "data": {
+      "project": "Fram.io",
+      "version": 1.1,
+      "date": "05/10/2017",
+      "guideContent": [
+        {
+          "title": "Changelog",
+          "block": "changelog"
+        },
+        {
+          "title": "Color Pallate",
+          "block": "colors"
+        },
+        {
+          "title": "Typography",
+          "block": "typo"
+        },
+        {
+          "title": "Icons",
+          "block": "icons"
+        },
+        {
+          "title": "Buttons",
+          "block": "buttons"
+        },
+        {
+          "title": "Forms",
+          "block": "forms"
+        }
+      ]
+    }
+  },
+  "changelog": {
+    "data": [
+      {
+        "dateAndVersion": "01/10/2017 - V1.0",
+        "description": [
+         "Release design"
+        ]
+      },
+      {
+        "dateAndVersion": "05/10/2017 - V1.1",
+        "description": [
+          "Change font to Muli (Google font support)",
+          "Change font icon to anticon (To learn import and compile fonts)",
+          "Some minor changes to the design"
+        ]
+      }
+    ]
+  },
+  "typo": {
+    "data": [
+      {
+        "className": "h1",
+        "fontName": "Heading H1",
+        "fontProperties": {
+          "fontFamily": "Muli",
+          "fontSize": "2.5rem",
+          "fontWeight": "normal",
+          "fontColor": "#8b8b8b"
+        }
+      },
+      {
+        "className": "h2",
+        "fontName": "Heading H2",
+        "fontProperties": {
+          "fontFamily": "Muli",
+          "fontSize": "2.25rem",
+          "fontWeight": "normal",
+          "fontColor": "#8b8b8b"
+        }
+      },
+      {
+        "className": "h3",
+        "fontName": "Heading H3",
+        "fontProperties": {
+          "fontFamily": "Muli",
+          "fontSize": "1.75rem",
+          "fontWeight": "normal",
+          "fontColor": "#8b8b8b"
+        }
+      },
+      {
+        "className": "title--black",
+        "fontName": "Title 1",
+        "fontProperties": {
+          "fontFamily": "Muli",
+          "fontSize": "1.75rem",
+          "fontWeight": "bold",
+          "fontColor": "#000"
+        }
+      },
+      {
+        "className": "title--orange-dark",
+        "fontName": "Title 2",
+        "fontProperties": {
+          "fontFamily": "Muli",
+          "fontSize": "1.75rem",
+          "fontWeight": "bold",
+          "fontColor": "#930700"
+        }
+      },
+      {
+        "className": "",
+        "fontName": "paragraph",
+        "fontProperties": {
+          "fontFamily": "Muli",
+          "fontSize": "1rem",
+          "fontWeight": "normal",
+          "fontColor": "#930700"
+        }
+      },
+      {
+        "className": "font-weight-bold",
+        "fontName": "paragraph bold",
+        "fontProperties": {
+          "fontFamily": "Muli",
+          "fontSize": "1rem",
+          "fontWeight": "bold",
+          "fontColor": "#930700"
+        }
+      }
+    ]
+  }
+}
+

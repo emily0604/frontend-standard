@@ -1,0 +1,71 @@
+mixin style-guide(data)
+  div.style-guide.container.d-flex.flex-column
+
+    h1.style-guide__heading Style Guide
+      span.style-guide__version Version #{data.version}
+      span.style-guide__date Update on #{data.date}
+    p.style-guide__sub-heading
+      | This is a style guideline for
+      span.style-guide__project-name= data.project
+      |. The template includes colours, typography, icons, buttons, forms…
+    ol.style-guide__list
+      each ent in data.guideContent
+        li.style-guide__list__item
+          span.guide-content__title= ent.title
+        block
+        div(class=ent.block)
+          - blocks[ent.block]()
+
+mixin changelog(data)
+  ul.guide-content__changelog
+    each change in data
+      li.font-weight-normal= change.dateAndVersion
+        ul.guide-content__changelog__detail
+          each des in change.description
+            li= des
+
+mixin colorPalette(color, hexCode)
+  div.card
+    div.card-img-top(style=`background-color: ${hexCode}; height: 10rem;`)
+    div.card-body
+      h5.card-title= color
+      p.card-text= hexCode
+
+mixin typo(data)
+  p Below you can specify the projects typography. Include a preview, font-family, font-size, font-weight, line-height and the colours.
+  ul.guide-content__list
+    each ent in data
+      li.guide-content__list__item
+        p(class= ent.className)= ent.fontName
+        ul.my-2.guide-content__typo.d-lg-inline-flex
+          if ent.fontName.includes('paragraph')
+            hr
+            li.ml-4
+              p(class=ent.className)
+                | This is a paragraph using
+                span.font-weight-bold= ent.fontProperties.fontFamily
+                span.font-weight-bold= ent.fontProperties.fontWeight
+                |  at font size
+                span.font-weight-bold= ent.fontProperties.fontSize
+                |  in the colour
+                span.font-weight-bold= ent.fontProperties.fontColor
+            li.ml-4
+              p(class=ent.className) Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae deleniti itaque sapiente minus quo, asperiores, fugiat recusandae tempora molestiae labore quis ipsum magnam dignissimos nostrum, aliquam eveniet? Non fugit ratione, eaque provident ullam quos rem.
+          else
+            li.ml-4.font-weight-light Font-family:
+              span.font-weight-bold= ent.fontProperties.fontFamily
+            li.ml-4.font-weight-light Font-size:
+              span.font-weight-bold= ent.fontProperties.fontSize
+            li.ml-4.font-weight-light Font-weight:
+              span.font-weight-bold= ent.fontProperties.fontWeight
+            li.ml-4.font-weight-light Color:
+              span.font-weight-bold= ent.fontProperties.fontColor
+
+
+mixin iconsGuide(iconfontName, source)
+  p
+  | The icons are from
+  span.font-weight-bold #{iconfontName}
+  |  and can be downloaded from
+  a(href= source).font-weight-normal #{source}
+

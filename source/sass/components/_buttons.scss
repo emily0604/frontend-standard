@@ -1,0 +1,25 @@
+.btn {
+  font-weight: $font-weight-light;
+  text-transform: uppercase;
+  letter-spacing: .3rem;
+}
+
+.btn-gradient-primary {
+  background: $gradient-primary;
+  color: $white;
+  border: 0;
+
+  &:hover {
+    background: $orange-primary;
+  }
+}
+
+.btn-gradient-secondary {
+  background: $gradient-secondary;
+  color: $white;
+  border: 0;
+
+  &:hover {
+    background: $gray-secondary;
+  }
+}

@@ -1,0 +1,26 @@
+body {
+  font-weight: $font-weight-normal;
+}
+
+.style-guide-typo {
+  font-weight: $font-weight-light;
+  color: $gray-secondary;
+}
+
+.title--black {
+  display: block;
+  font-size: 2.25rem;
+  color: $black;
+  font-weight: $font-weight-bold;
+}
+
+.title--orange-dark {
+  display: block;
+  font-size: 2.25rem;
+  color: $orange-dark;
+  font-weight: $font-weight-bold;
+}
+
+.invalid-feedback {
+  position: absolute;
+}

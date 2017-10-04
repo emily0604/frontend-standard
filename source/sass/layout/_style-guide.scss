@@ -1,0 +1,102 @@
+.style-guide {
+  padding: 2rem;
+
+  &__heading {
+    font-weight: $font-weight-bold;
+    font-size: 3rem;
+  }
+
+  &__sub-heading {
+    font-weight: $font-weight-light;
+    color: $gray-secondary;
+    padding-bottom: 3rem;
+  }
+
+  &__version {
+    font-weight: $font-weight-light;
+    color: $gray-secondary;
+    font-size: 3rem;
+
+    &::before {
+      content: '- ';
+    }
+  }
+
+  &__date {
+    font-weight: $font-weight-light;
+    color: $gray-secondary;
+    font-size: 1.35rem;
+    margin-left: -.5rem;
+  }
+
+  &__project-name {
+    text-transform: uppercase;
+  }
+}
+
+.style-guide__list {
+  counter-reset: item;
+
+  &__item {
+    font-weight: $font-weight-light;
+    color: $gray-secondary;
+    padding: 1.25rem 0;
+
+    &::before {
+      font-size: 2.25rem;
+      counter-increment: item;
+      content: counter(item, decimal-leading-zero) ' ';
+    }
+  }
+}
+
+.guide-content__title {
+  font-size: 2.25rem;
+  color: $black;
+  font-weight: $font-weight-bold;
+  display: inline-block;
+  padding-bottom: .25rem;
+}
+
+//Style for each guide-content inside the style-guide
+
+.guide-content__list {
+  padding-left: 3rem;
+
+  &__item {
+    padding: .75rem 0;
+
+    &:first-child {
+      padding-top: 2.5rem;
+    }
+  }
+}
+
+//Guide-content changelog
+.guide-content__changelog {
+  padding-left: 3.25rem;
+
+  &__detail {
+    font-weight: $font-weight-light;
+    padding: 1rem 2rem;
+
+    li::before {
+      content: '-';
+      position: absolute;
+      margin-left: -1rem;
+    }
+  }
+}
+
+//Guide-content typography
+.guide-content__typo {
+
+  li::before {
+    content: '-';
+    font-weight: $font-weight-light;
+    position: absolute;
+    margin-left: -1rem;
+  }
+}
+
+
