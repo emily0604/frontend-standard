@@ -27,3 +27,17 @@
   border: 1px solid $gray-secondary;
   border-radius: 50%;
 }
+
+.holder-gray-600 {
+  background-color: $gray-600;
+  border-radius: .5rem;
+  flex: 0 0 100%;
+  color: $white;
+}
+
+.holder-gray-300 {
+  background-color: $gray-300;
+  border-radius: .5rem;
+  flex: 0 0 100%;
+  color: $white;
+}

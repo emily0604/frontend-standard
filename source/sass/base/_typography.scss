@@ -1,5 +1,10 @@
 body {
+  font-size: $font-size-base;
   font-weight: $font-weight-normal;
+
+  @include respond-to(phone-and-down) {
+    line-height: 1.35;
+  }
 }
 
 .style-guide-typo {
@@ -7,18 +12,23 @@ body {
   color: $gray-secondary;
 }
 
-.title--black {
+.title {
   display: block;
   font-size: 2.25rem;
-  color: $black;
   font-weight: $font-weight-bold;
-}
 
-.title--orange-dark {
-  display: block;
-  font-size: 2.25rem;
-  color: $orange-dark;
-  font-weight: $font-weight-bold;
+  @include respond-to(phone-and-down) {
+    font-size: 2rem;
+    line-height: 1;
+  }
+
+  &--black {
+    color: $black;
+  }
+
+  &--orange-dark {
+    color: $orange-dark;
+  }
 }
 
 .invalid-feedback {

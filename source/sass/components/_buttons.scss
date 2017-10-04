@@ -2,6 +2,12 @@
   font-weight: $font-weight-light;
   text-transform: uppercase;
   letter-spacing: .3rem;
+  margin: .25rem;
+
+  @include respond-to(smallphone-and-down) {
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+  }
 }
 
 .fr-btn-primary {
@@ -23,3 +29,5 @@
     background: $gray-secondary;
   }
 }
+
+

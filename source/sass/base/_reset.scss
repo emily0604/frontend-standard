@@ -2,6 +2,14 @@
 // Base :: Reset
 // --------------------------------------------------
 
+html {
+  font-size: $font-size-base;
+
+  @include respond-to(phone-and-down) {
+    font-size: $font-size-sm;
+  }
+}
+
 article,
 aside,
 details,

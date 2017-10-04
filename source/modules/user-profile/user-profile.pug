@@ -1,0 +1,16 @@
+include ../header/header
+include ../footer/footer
+
+- var n = 0;
+
+mixin user-profile()
+  main.user-profile
+    +header-dashboard('User Profile')
+    ul.user-profile__info-list
+      while n < 8
+        li.holder-gray-600
+          p.pt-2.pl-2= n++
+    div.user-profile__buttons
+      +button('Save', 'anchor').fr-btn-primary
+      +button('Cancel', 'anchor').fr-btn-secondary
+    +footer()

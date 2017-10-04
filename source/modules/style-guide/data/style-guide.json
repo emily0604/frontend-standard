@@ -2,8 +2,8 @@
   "styleGuide": {
     "data": {
       "project": "Fram.io",
-      "version": 1.1,
-      "date": "05/10/2017",
+      "version": 1.2,
+      "date": "25/10/2017",
       "guideContent": [
         {
           "title": "Changelog",
@@ -28,6 +28,10 @@
         {
           "title": "Forms",
           "block": "forms"
+        },
+        {
+          "title": "Margins & Paddings",
+          "block": "margins-and-paddings"
         }
       ]
     }
@@ -46,6 +50,12 @@
           "Change font to Muli (Google font support)",
           "Change font icon to anticon (To learn import and compile fonts)",
           "Some minor changes to the design"
+        ]
+      },
+      {
+        "dateAndVersion": "25/10/2017 - V1.2",
+        "description": [
+          "Add margins/paddings guideline"
         ]
       }
     ]
@@ -83,7 +93,7 @@
         }
       },
       {
-        "className": "title--black",
+        "className": "title title--black",
         "fontName": "Title 1",
         "fontProperties": {
           "fontFamily": "Muli",
@@ -93,7 +103,7 @@
         }
       },
       {
-        "className": "title--orange-dark",
+        "className": "title title--orange-dark",
         "fontName": "Title 2",
         "fontProperties": {
           "fontFamily": "Muli",

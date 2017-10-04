@@ -15,26 +15,83 @@ $font-family-primary: 'Muli', sans-serif;
 $font-logo: 'Baumans', cursive;
 
 
+
+//Margins and Paddings
+////////////////////////////////////////////////////////////////
+
+$s: 2rem; //1[s]pace for margins/paddings is 2rem
+
+$s-small: 1.25rem;
+$s-big: 3rem;
+
+$spaces: $s-big $s;
+$spaces-small: $s $s-small;
+
+
 //Colors
 ////////////////////////////////////////////////////////////////
+
+$white:  #fff;
+$gray-100: #f8f9fa;
+$gray-200: #e9ecef;
+$gray-300: #dee2e6;
+$gray-400: #ced4da;
+$gray-500: #adb5bd;
+$gray-600: #868e96;
+$gray-700: #495057;
+$gray-800: #343a40;
+$gray-900: #212529;
+$black:  #000;
+
+$grays: (
+  100: $gray-100,
+  200: $gray-200,
+  300: $gray-300,
+  400: $gray-400,
+  500: $gray-500,
+  600: $gray-600,
+  700: $gray-700,
+  800: $gray-800,
+  900: $gray-900
+);
 
 $orange-primary: #ee6313;
 $orange-dark: #930700;
 $orange-light: #f5a623;
+$orange-sub: #FF7915;
 $gray-secondary: #8b8b8b;
 $gray-light: #B8B7B7;
 
 $gradient-primary: linear-gradient($orange-light, $orange-primary);
 $gradient-secondary: linear-gradient($gray-light, $gray-secondary);
+$gradient-dark: linear-gradient($orange-sub, $orange-dark);
+
+
 
 /// Layout :: Sidebar
 ////////////////////////////////////////////////////////////////
 
 $sidebar-width: 23.75rem;
 $sidebar-bg-color: $gradient-primary;
+$sidebar-width: 18.75rem;
+$sidebar-width-collapsed: 4.75rem;
+$sidebar-bg-color: $gradient-dark;
 $sidebar-text-link: $orange-dark;
 $sidebar-text-title: $orange-dark;
 $sidebar-text-user-name: #fff;
 
 
 
+/// Layout :: Header (various types)
+////////////////////////////////////////////////////////////////
+
+$header-height: 5.94rem;
+$header-bg-color: $gray-200;
+
+
+
+/// Layout :: Footer
+////////////////////////////////////////////////////////////////
+
+$footer-height: 2.19rem;
+$footer-bg-color: $gray-200;

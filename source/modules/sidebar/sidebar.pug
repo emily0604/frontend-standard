@@ -2,12 +2,15 @@ mixin sidebar(data)
   .sidebar
     h2.sidebar__user-avatar
       a(href="#") User avatar image
-    p.sidebar__username Emily Doe
-    ul.nav.nav-stacked.sidebar__nav
+    p.sidebar__user-name Emily Doe
+    p.sidebar__user-title Communicator
+    ul.sidebar__nav.nav.nav-stacked.w-100.d-flex.mt-5.flex-column.align-self-start
       each item in data
-        li.nav-item
-          a.nav-link(href='#')
-            i(class=`anticon icon-${item.icon}`)
-            span.text= item.title
+        li.sidebar__nav__list
+          a.sidebar__nav__link(href='#')
+            i.sidebar__nav__icon(class=`anticon icon-${item.icon}`)
+            span.sidebar__nav__text= item.title
+            if item.badge
+              span.sidebar__nav__badge.badge.badge-pill= item.badge
     h4.sidebar__footer
       a(href='#') Logo

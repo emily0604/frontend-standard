@@ -8,14 +8,14 @@
 /// @requires $breakpoints
 $breakpoints: (
   'smallphone-and-down': (max-width: 480px),
-  'phone-and-down': (max-width: 767px),
+  'phone-and-down': (max-width: 576px),
   'tablet-and-down': (max-width: 991px),
   'desktop-and-down': (max-width: 1199px),
   'large-desktop-and-down': (max-width: 1350px),
-  'phone-and-up': (min-width: 768px),
-  'tablet-and-up': (min-width: 992px),
-  'desktop-and-up': (min-width: 1200px),
-  'tablet-and-desktop': (min-width: 992px) and (max-width: 1199px),
+  'tablet-and-up': (min-width: 768px),
+  'desktop-and-up': (min-width: 992px),
+  'large-desktop-and-up': (min-width: 1200px),
+  'tablet-and-desktop': (min-width: 768px) and (max-width: 1199px),
   'phone-and-tablet': (min-width: 768px) and (max-width: 991px),
   'smallphone-and-phone': (min-width: 480px) and (max-width: 767px)
 );
@@ -30,7 +30,7 @@ $breakpoints: (
       inspect($raw-query)
     );
 
-    @media #{$query} {
+    @media screen and #{$query} {
       @content;
     }
   } @else {
