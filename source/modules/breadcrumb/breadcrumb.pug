@@ -1,0 +1,8 @@
+mixin breadcrumb(...items)
+  ol.breadcrumb
+    each item, index in items
+      if index+1 === items.length
+        li.active=item
+      else
+        li
+          a(href='#')=item

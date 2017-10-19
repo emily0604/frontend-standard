@@ -1,0 +1,40 @@
+// Paths
+////////////////////////////////////////////////////////////////
+
+$path-to-images: '../images/';
+$path-to-fonts: '../fonts/';
+
+
+
+// Typography
+////////////////////////////////////////////////////////////////
+
+@import url('https://fonts.googleapis.com/css?family=Baumans|Muli:200,300,700');
+
+$font-family-primary: 'Muli', sans-serif;
+$font-logo: 'Baumans', cursive;
+
+
+//Colors
+////////////////////////////////////////////////////////////////
+
+$orange-primary: #ee6313;
+$orange-dark: #930700;
+$orange-light: #f5a623;
+$gray-secondary: #8b8b8b;
+$gray-light: #B8B7B7;
+
+$gradient-primary: linear-gradient($orange-light, $orange-primary);
+$gradient-secondary: linear-gradient($gray-light, $gray-secondary);
+
+/// Layout :: Sidebar
+////////////////////////////////////////////////////////////////
+
+$sidebar-width: 23.75rem;
+$sidebar-bg-color: $gradient-primary;
+$sidebar-text-link: $orange-dark;
+$sidebar-text-title: $orange-dark;
+$sidebar-text-user-name: #fff;
+
+
+

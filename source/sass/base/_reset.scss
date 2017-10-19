@@ -1,0 +1,61 @@
+//
+// Base :: Reset
+// --------------------------------------------------
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+// body {
+//   line-height: 1;
+// }
+
+ol,
+ul {
+  list-style: none;
+}
+
+a {
+  &,
+  &:focus,
+  &:hover {
+    outline: none;
+    text-decoration: none;
+  }
+}
+
+button {
+  &,
+  &.button {
+    &:focus {
+      outline: 0 none;
+    }
+  }
+}
+
+[type='checkbox']:focus {
+  outline: 0;
+}

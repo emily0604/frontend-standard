@@ -1,24 +1,29 @@
+
 @import 'abstracts/variables';
 @import 'abstracts/mixins';
 @import 'abstracts/functions';
 @import 'abstracts/animate';
 
+@import 'vendors/bootstrap-override-variable';
+@import 'node_modules/bootstrap/scss/bootstrap';
+
 @import 'base/typography';
 @import 'base/colors';
 @import 'base/images';
+@import 'base/global';
+@import 'base/reset';
 
-@import 'vendors/bootstrap-override-variable';
-@import 'bootstrap';
-@import 'font-awesome';
-
-@import 'layout/grid';
 @import 'layout/content';
 @import 'layout/header';
 @import 'layout/footer';
 @import 'layout/section';
+@import 'layout/sidebar';
+@import 'layout/style-guide';
 
 @import 'components/ui-elements';
-@import 'components/title';
 @import 'components/navigation-tab';
 @import 'components/table';
 @import 'components/block';
+@import 'components/buttons';
+@import 'components/forms';
+

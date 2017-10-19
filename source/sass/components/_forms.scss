@@ -1,0 +1,22 @@
+.form-control {
+  border-radius: 1.5rem;
+}
+
+.form-addon {
+  position: relative;
+
+  i {
+    color: $input-placeholder-color;
+    font-size: 1.25rem;
+    position: absolute;
+    bottom: 1.3rem;
+    left: 1.3rem;
+    width: 1rem;
+    height: 1rem;
+    z-index: 3;
+  }
+
+  .form-control {
+    padding-left: 3.65rem;
+  }
+}

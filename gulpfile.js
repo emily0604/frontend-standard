@@ -79,7 +79,6 @@ var scss = {
     precison: 3,
     errLogToConsole: true,
     includePaths: [
-      './node_modules/bootstrap-sass/assets/stylesheets',
       './node_modules/font-awesome/scss/',
       './node_modules/owl.carousel/src/scss',
     ]
@@ -91,7 +90,6 @@ var scss = {
 var fonts = {
   in: [
     source + 'fonts/*.*',
-    './node_modules/bootstrap-sass/assets/fonts/**/*.*',
     './node_modules/font-awesome/fonts/*', source + 'fonts-2/**/*'
   ],
   out: dest + 'fonts/'
@@ -101,7 +99,7 @@ var fonts = {
 var js = {
   in: [
     source + 'js/*.*',
-    './node_modules/bootstrap-sass/assets/javascripts/bootstrap.min.js'
+    './node_modules/bootstrap/dist/js/bootstrap.min.js'
   ],
   out: dest + 'js/'
 };

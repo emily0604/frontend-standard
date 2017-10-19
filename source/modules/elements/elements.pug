@@ -1,0 +1,146 @@
+//-
+//- Elements :: Buttons
+//- @param {string} label - Name of button
+//- @param {string} [link] - If button is anchor tag, string is 'anchor'
+//- @param {string} [icon] - Name of icon
+//-
+
+mixin button(label, link, icon)
+  if typeof link !== 'undefined' && link === 'anchor'
+    a(href='#').btn&attributes(attributes)
+      if typeof icon !== 'undefined' && icon !== ''
+        i(class=icon).btn__icon
+      span.text= label
+  else
+    button.btn&attributes(attributes)
+      if typeof icon !== 'undefined' && icon !== ''
+        i(class=icon).btn__icon
+      span.text= label
+
+
+
+//-
+//- Elements :: Selectbox
+//-
+
+mixin selectbox(defaultValue, ...items)
+  select.custom-select&attributes(attributes)
+    option(value='default' selected data-option='0')= defaultValue
+    each item, index in items
+      option(value=index+1 data-option=index+1)= item
+
+
+
+//-
+//- Elements :: Form/Radio (From B4)
+//- @param {string} caption - caption displayed for radio
+//-
+
+mixin radio(caption)
+  label.custom-control.custom-radio
+    input(
+      type='radio',
+      class='custom-control-input'
+    )&attributes(attributes)
+    span.custom-control-indicator
+    span.custom-control-description= caption
+
+
+
+//-
+//- Elements :: Form/Checkbox (From B4)
+//- @param {string} caption - caption displayed for radio
+//-
+
+mixin checkbox(caption)
+  label.custom-control.custom-checkbox
+    input(
+      type='checkbox',
+      class='custom-control-input'
+    )&attributes(attributes)
+    span.custom-control-indicator
+    span.custom-control-description= caption
+
+
+
+
+//-
+//- Elements :: Input field
+//- @param {string} label - Name of label input field
+//- @param {string} [icon] - Customized input-addon for [icon] with class
+//- @param {string} [hasStyle] - style: succes/warning/danger
+//- @param {string} [inputType=text] - Type of input field. Default: 'text'
+//- @param {string} [valid] - is-valid/is-invalid
+//-
+
+mixin input(label, icon, inputType, valid, feedback)
+  if (typeof icon !== 'undefined' && icon !== '')
+    .form-group.form-addon
+      label= label
+      i(class=`anticon icon-${icon}`)
+      input(
+        type= typeof inputType === 'undefined' || inputType === '' ? 'text' : inputType,
+        class= typeof valid === 'undefined' || valid === '' ? 'form-control' : 'form-control ' + valid,
+      )&attributes(attributes)
+      if (valid === 'is-invalid')
+        div.invalid-feedback #{feedback}
+  else
+    .form-group(class= typeof valid === 'undefined' || valid === '' ? '' : valid)
+      label= label
+        input(
+          type= typeof inputType === 'undefined' || inputType === '' ? 'text' : inputType,
+          class=typeof valid === 'undefined' || valid === '' ? 'form-control' : 'form-control ' + valid,
+          value=value
+        )&attributes(attributes)
+        if (valid === 'is-invalid')
+          div.invalid-feedback #{feedback}
+
+
+
+//-
+//- Elements :: Textarea
+//-
+mixin textarea(label)
+  .form-group
+    if label !== ''
+      label= label
+    textarea(
+      class='form-control',
+    )&attributes(attributes)
+
+
+
+
+//-
+//- Elements :: Image mixins
+//-
+
+mixin img-responsive(src,alt)
+  img.img-responsive(src=src,alt=alt)
+
+mixin img-responsive-center(src,alt)
+  img.img-responsive.center-block(src=src,alt=alt)
+
+mixin img-rounded(src,alt)
+  img.img-rounded(src=src,alt=alt)
+
+mixin img-circle(src,alt)
+  img.img-circle(src=src,alt=alt)
+
+mixin img-thumbnail(src,alt)
+  img.img-thumbnail(src=src,alt=alt)
+
+//-
+//- Elements :: Ant icons
+//-
+
+mixin anticon(icon)
+  i(class=`anticon icon-${icon}`)&attributes(attributes)
+
+//-
+//-Multi-block in mixin declaration
+//-
+- blocks = {}
+
+mixin set-block(key)
+  - blocks[key] = this.block
