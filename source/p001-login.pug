@@ -1,0 +1,24 @@
+include modules/head/head
+include modules/elements/elements
+
+doctype html
+html
+  +head(head.p001-login)
+
+  body
+    .p001-login
+      .container.h-100
+        .row.h-100
+          .col-md-5.h-100.d-flex.flex-column.justify-content-center.align-items-center
+            .mt-auto.mb-5.avatar-placeholder
+            .p001-login__inputs
+              +input('', 'user')(name='username' placeholder='Username')
+              +input('', 'lock')(name='password' type='password' placeholder='Password')
+              .my-3.d-flex.justify-content-center
+                +checkbox('Remember me')(name='remember-me')
+              +button('login', 'anchor').fr-btn-primary.btn-block
+            a.mt-3(href='#') Forgot password?
+            p.mt-3 Not a member yet?
+              a(href='#')
+                u Sign up here
+            a.mt-auto.mb-5(href='#') Terms of use

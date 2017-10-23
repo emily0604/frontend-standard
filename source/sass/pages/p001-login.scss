@@ -1,0 +1,12 @@
+.p001-login {
+  background-image: url('#{$path-to-images}login-background.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+
+  &__inputs {
+    min-width: 75%;
+  }
+}

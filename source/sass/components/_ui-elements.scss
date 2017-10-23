@@ -16,3 +16,14 @@
 
   }
 }
+
+.avatar-placeholder {
+  background-image: url('#{$path-to-images}avatar-placeholder.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  width: 6.75rem;
+  height: 6.75rem;
+  border: 1px solid $gray-secondary;
+  border-radius: 50%;
+}
