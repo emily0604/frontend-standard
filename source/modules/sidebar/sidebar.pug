@@ -1,5 +1,7 @@
 mixin sidebar(data)
   .sidebar
+    a.sidebar--off__close-btn(href='#')
+      +anticon('close')
     h2.sidebar__user-avatar
       a(href="#") User avatar image
     p.sidebar__user-name Emily Doe

@@ -1,0 +1,36 @@
+include modules/head/head
+include modules/elements/elements
+include modules/sidebar/sidebar
+include modules/footer/footer
+include modules/messages/messages
+
+doctype html
+html
+  head
+    +head(head.p005-messages)
+
+  body
+    .d-flex
+      +sidebar(sidebar.data)
+      main.messages
+        +header-dashboard('Messages')
+          a(href='#').btn.fr-btn-primary.btn-sm.messages__header-btn
+            i(class='fa fa-comments' aria-hidden="true")
+            span.text New mess
+
+        .d-flex.w-100
+          .messages__main-content
+            +message-history(userInfo.data, peopleBlocks.data[0])
+            +message-chatbox()
+          .messages__sidebar
+            .messages__search-filter
+              .w-100.d-flex.align-items-center
+                a.messages__sidebar--off__close-btn(href='#')
+                  +anticon('close')
+                +input('', 'search1')(placeholder='Search')
+              +button-dropdown('Most recent', 'anchor', 'messages-sort', 'Online', 'Offline', 'Favorite').btn-transparent.messages__filter
+            +people-blocks(peopleBlocks.data)
+        +footer()
+
+
+    script(type='text/javascript', src='js/main.js')

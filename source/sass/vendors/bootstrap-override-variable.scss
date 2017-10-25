@@ -68,17 +68,26 @@ $theme-colors: (
 $font-family-base: $font-family-primary;
 $line-height-base: 1.55;
 
+$lead-font-size: 1.13rem;
+
 //Font weight
 $font-weight-light: 200;
 $font-weight-normal: 300;
 $font-weight-bold: 700;
 
-
 //Buttons
-$btn-border-radius:              1.5rem;
+$border-radius: 1.5rem;
+$border-radius-lg: 2rem;
+$border-radius-sm: 1.15rem;
 
-$input-btn-padding-y:       .75rem;
-$input-btn-padding-x:       1.5rem;
+$input-btn-padding-y: .75rem;
+$input-btn-padding-x: 1.5rem;
+
+$input-btn-padding-y-sm: .5rem;
+$input-btn-padding-x-sm: 1.25rem;
+
+$input-btn-padding-y-lg: 1rem;
+$input-btn-padding-x-lg: 2rem;
 
 //Custom forms
 $custom-select-border-radius: 1.5rem;

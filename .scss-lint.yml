@@ -83,6 +83,8 @@ linters:
 
   ImportantRule:
     enabled: true
+    exclude:
+      - 'source/sass/layout/_messages.scss' # Override style of class .btn
 
   ImportPath:
     enabled: true

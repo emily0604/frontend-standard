@@ -1,5 +1,8 @@
 mixin header-dashboard(title)
   header.header-dashboard
+    //For the best UX we put the sidebar button on the header
+    a.sidebar__toggle-btn(href='#')
+      +anticon('menufold')
     p.title.title--orange-dark= title
-
-
+    if block
+      block

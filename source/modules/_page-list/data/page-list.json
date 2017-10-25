@@ -13,6 +13,9 @@
       },{
         "title": "User profile and Settings",
         "url": "p002-p003-user-profile-and-settings"
+      },{
+        "title": "Messages",
+        "url": "p005-messages"
       }
     ]
   }

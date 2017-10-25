@@ -1,5 +1,5 @@
 //-
-//- Elements :: Buttons
+//- Elements :: Button
 //- @param {string} label - Name of button
 //- @param {string} [link] - If button is anchor tag, string is 'anchor'
 //- @param {string} [icon] - Name of icon
@@ -9,13 +9,78 @@ mixin button(label, link, icon)
   if typeof link !== 'undefined' && link === 'anchor'
     a(href='#').btn&attributes(attributes)
       if typeof icon !== 'undefined' && icon !== ''
-        i(class=icon).btn__icon
+        i(class=`anticon icon-${icon}`)
       span.text= label
   else
     button.btn&attributes(attributes)
       if typeof icon !== 'undefined' && icon !== ''
-        i(class=icon).btn__icon
+        i(class=`anticon icon-${icon}`)
       span.text= label
+
+
+//-
+//- Elements :: Button-dropdown
+//- @param {string} label - Name of button
+//- @param {string} [link] - If button is anchor tag, string is 'anchor'
+//- @param {string} [id] - button id for dropdown menu
+//- @param {string} [icon] - Name of icon
+//- @param {string} [...options] - All the following options
+//-
+
+mixin button-dropdown(label, link, id, ...options)
+  if typeof link !== 'undefined' && link === 'anchor'
+    .dropdown.show
+      a(
+        id= id,
+        href='#',
+        class='btn dropdown-toggle',
+        role='button',
+        data-toggle='dropdown',
+        aria-haspopup='true',
+        aria-expanded='false'
+      )&attributes(attributes)= label
+      div(aria-labelledby= id).dropdown-menu
+        each option in options
+          a(href='#').dropdown-item= option
+  else
+    .dropdown
+      button(
+        id= id,
+        class='btn dropdown-toggle',
+        type='button',
+        data-toggle='dropdown',
+        aria-haspopup='true',
+        aria-expanded='false'
+      )&attributes(attributes)= label
+      div(aria-labelledby= id).dropdown-menu
+        each option in options
+          a(href='#').dropdown-item= option
+
+
+//-
+//- Elements :: Button-dropdown-split
+//- @param {string} label - Name of button
+//- @param {string} [id] - button id for dropdown menu
+//- @param {string} [icon] - Name of icon
+//-
+
+mixin button-dropdown-split(label, ...options)
+  .btn-group
+    button(
+      type='button',
+      class='btn',
+    )&attributes(attributes)= label
+    button(
+      type='button',
+      class='btn dropdown-toggle dropdown-toggle-split',
+      data-toggle='dropdown',
+      aria-haspopup='true',
+      aria-expanded='false'
+    )&attributes(attributes)
+      span.sr-only Span for toggle this dropdown
+    .dropdown-menu
+      each option in options
+        a(href='#').dropdown-item= option
 
 
 
@@ -76,7 +141,8 @@ mixin checkbox(caption)
 mixin input(label, icon, inputType, valid, feedback)
   if (typeof icon !== 'undefined' && icon !== '')
     .form-group.form-addon
-      label= label
+      if label
+        label= label
       i(class=`anticon icon-${icon}`)
       input(
         type= typeof inputType === 'undefined' || inputType === '' ? 'text' : inputType,
@@ -86,14 +152,15 @@ mixin input(label, icon, inputType, valid, feedback)
         div.invalid-feedback #{feedback}
   else
     .form-group(class= typeof valid === 'undefined' || valid === '' ? '' : valid)
-      label= label
-        input(
-          type= typeof inputType === 'undefined' || inputType === '' ? 'text' : inputType,
-          class=typeof valid === 'undefined' || valid === '' ? 'form-control' : 'form-control ' + valid,
-          value=value
-        )&attributes(attributes)
-        if (valid === 'is-invalid')
-          div.invalid-feedback #{feedback}
+      if label
+        label= label
+      input(
+        type= typeof inputType === 'undefined' || inputType === '' ? 'text' : inputType,
+        class=typeof valid === 'undefined' || valid === '' ? 'form-control' : 'form-control ' + valid,
+        value=value
+      )&attributes(attributes)
+      if (valid === 'is-invalid')
+        div.invalid-feedback #{feedback}
 
 
 
@@ -102,12 +169,11 @@ mixin input(label, icon, inputType, valid, feedback)
 //-
 mixin textarea(label)
   .form-group
-    if label !== ''
+    if label
       label= label
     textarea(
       class='form-control'
     )&attributes(attributes)
-
 
 
 
@@ -130,12 +196,25 @@ mixin img-circle(src,alt)
 mixin img-thumbnail(src,alt)
   img.img-thumbnail(src=src,alt=alt)
 
+
+
 //-
 //- Elements :: Ant icons
 //-
 
 mixin anticon(icon)
   i(class=`anticon icon-${icon}`)&attributes(attributes)
+
+
+
+//-
+//- Elements :: Font-awesome icons
+//-
+
+mixin faicon(icon)
+  i(class=`fa fa-${icon}` aria-hidden='true')&attributes(attributes)
+
+
 
 //-
 //-Multi-block in mixin declaration
