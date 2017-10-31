@@ -3,13 +3,16 @@
   flex-direction: column;
   align-items: center;
   min-height: 100vh;
-  width: $sidebar-width;
+  flex: 0 0 $sidebar-width;
   transition: transform .5s ease-in-out;
   background: $sidebar-bg-color;
-}
 
-  .sidebar__user-avatar {
-    margin-top: 5rem;
+  @include respond-to(tablet-and-down) {
+    flex: 0 0 $sidebar-width-collapsed;
+  }
+
+  &__user-avatar {
+    margin-top: 3rem;
 
     a {
       display: block;
@@ -18,31 +21,124 @@
       height: 6.88rem;
       border-radius: 50%;
       background: url('#{$path-to-images}user-avatar.png') no-repeat center center;
+
+      @include respond-to(tablet-and-down) {
+        width: 3.75rem;
+        height: 3.75rem;
+      }
     }
   }
 
-  .sidebar__username {
+
+  &__user-name {
     font-weight: $font-weight-light;
     color: $white;
     font-size: 1.75rem;
+
+    @include respond-to(tablet-and-down) {
+      display: none;
+    }
   }
 
-  .sidebar__nav {
-    margin-top: 3rem;
-    display: flex;
-    flex-direction: column;
+  &__user-title {
+    color: $orange-dark;
+    font-size: 1.13rem;
+
+    @include respond-to(tablet-and-down) {
+      display: none;
+    }
   }
 
-    .nav-item {
-      position: relative;
+  &__footer {
+    margin-top: auto;
+    margin-bottom: 1rem;
 
-      .nav-link {
-        color: $sidebar-text-link;
-        font-size: 1.5rem;
+    a {
+      display: block;
+      text-indent: -9999rem;
+      background-image: url('#{$path-to-images}fram-io-logo--text-white.png');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      min-width: 10rem;
+      height: 2.25rem;
 
-        .anticon {
-          font-size: 1.45rem;
-          padding-right: .75rem;
-        }
+      @include respond-to(tablet-and-down) {
+        min-width: 2rem;
+        background-image: url('#{$path-to-images}fram-io-logo--white.png');
       }
     }
+  }
+
+}
+
+.sidebar__nav {
+
+  &__list {
+    width: 100%;
+    padding: .5rem 1.5rem;
+    position: relative;
+
+    &:hover,
+    &:focus,
+    &--active {
+      background-color: $gray-200;
+
+      .sidebar__nav__link {
+        color: $orange-dark;
+      }
+
+      .sidebar__nav__badge {
+        background-color: $orange-dark;
+        color: $white;
+      }
+
+      &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        background-color: $orange-dark;
+        width: .25rem;
+        height: 100%;
+      }
+    }
+  }
+
+  &__link {
+    color: $white;
+    font-size: 1.25rem;
+    display: flex;
+    align-items: center;
+
+    @include respond-to(tablet-and-down) {
+      display: block;
+      font-size: 1.5rem;
+    }
+  }
+
+
+  &__text {
+    margin-left: .75rem;
+
+    @include respond-to(tablet-and-down) {
+      display: none;
+    }
+  }
+
+  &__badge {
+    background-color: $gray-200;
+    color: $orange-dark;
+    font-size: 1rem;
+    font-weight: $font-weight-normal;
+    margin-left: auto;
+
+    @include respond-to(tablet-and-down) {
+      font-size: .7rem;
+      margin-left: 0;
+      position: absolute;
+      top: .5rem;
+      right: .65rem;
+    }
+  }
+}

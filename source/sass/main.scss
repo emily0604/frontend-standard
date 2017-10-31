@@ -12,6 +12,7 @@
 @import 'base/images';
 @import 'base/global';
 @import 'base/reset';
+@import 'base/spaces';
 
 @import 'layout/content';
 @import 'layout/header';
@@ -19,6 +20,7 @@
 @import 'layout/section';
 @import 'layout/sidebar';
 @import 'layout/style-guide';
+@import 'layout/user-profile';
 
 @import 'components/ui-elements';
 @import 'components/navigation-tab';
@@ -28,4 +30,3 @@
 @import 'components/forms';
 
 @import 'pages/p001-login';
-

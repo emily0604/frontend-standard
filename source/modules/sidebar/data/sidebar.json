@@ -7,15 +7,21 @@
       },
       {
         "title": "Notifications",
-        "icon": "bells"
+        "icon": "bells",
+        "badge": "03"
       },
       {
         "title": "Billings",
-        "icon": "credit-card"
+        "icon": "wallet"
       },
       {
         "title": "Security",
         "icon": "lock"
+      },
+       {
+        "title": "Messages",
+        "icon": "message1",
+        "badge": "05"
       },
       {
         "title": "Settings",

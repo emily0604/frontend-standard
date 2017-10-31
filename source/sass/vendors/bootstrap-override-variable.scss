@@ -66,7 +66,13 @@ $theme-colors: (
 
 //Font family
 $font-family-base: $font-family-primary;
-$line-height-base: 1.45;
+$line-height-base: 1.55;
+
+//Font weight
+$font-weight-light: 200;
+$font-weight-normal: 300;
+$font-weight-bold: 700;
+
 
 //Buttons
 $btn-border-radius:              1.5rem;

@@ -65,27 +65,22 @@
 
   &__item {
     padding: .75rem 0;
-
-    &:first-child {
-      padding-top: 2.5rem;
-    }
   }
 }
 
-//Guide-content changelog
-.guide-content__changelog {
-  padding-left: 3.25rem;
+  .guide-content__changelog {
+    padding-left: 3.25rem;
 
-  &__detail {
-    font-weight: $font-weight-light;
-    padding: 1rem 2rem;
+    &__detail {
+      font-weight: $font-weight-light;
+      padding: 1rem 2rem;
 
-    li::before {
-      content: '-';
-      position: absolute;
-      margin-left: -1rem;
+      li::before {
+        content: '-';
+        position: absolute;
+        margin-left: -1rem;
+      }
     }
-  }
 }
 
 //Guide-content typography
@@ -97,6 +92,18 @@
     position: absolute;
     margin-left: -1rem;
   }
+}
+
+//Guide-content Margins and Padddings
+.outline {
+  border: 1px solid $gray-secondary;
+  width: 100%;
+  height: 100%;
+  margin: .5rem 0 1rem;
+}
+
+.demo {
+  min-height: 100%;
 }
 
 

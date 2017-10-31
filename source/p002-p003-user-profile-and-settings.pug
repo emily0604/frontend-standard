@@ -1,0 +1,16 @@
+include modules/head/head
+include modules/elements/elements
+include modules/sidebar/sidebar
+include modules/footer/footer
+include modules/user-profile/user-profile
+
+doctype html
+html
+  head
+    +head(head.p002-p003-user-profile-and-settings)
+
+  body
+    .d-flex
+      +sidebar(sidebar.data)
+      +user-profile()
+

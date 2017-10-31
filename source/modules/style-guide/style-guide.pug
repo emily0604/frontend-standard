@@ -69,3 +69,26 @@ mixin iconsGuide(iconfontName, source)
   |  and can be downloaded from
   a(href= source).font-weight-normal #{source}
 
+
+
+mixin marginsAndPaddings()
+  .d-md-flex.justify-content-between
+    h3.inline-block Normal margins block
+    span { margin: $spaces; }
+  .outline
+    .demo.margin--normal.padding--normal.holder-gray-600.d-flex.flex-column
+      .d-md-flex.justify-content-between
+        h5 Normal paddings elememt
+        span { padding: $spaces; }
+      p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam nisi laborum esse harum quam accusamus provident.
+    .demo.margin--normal.padding--small.holder-gray-600
+      .d-md-flex.justify-content-between
+        h5 Small paddings elememt
+        span { padding: $spaces-small; }
+      p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis neque quas maxime cupiditate saepe tempora.
+  .d-md-flex.justify-content-between
+    h3 Small margins block
+    span { margin: $spaces-small; }
+  .outline
+    .demo.margin--small.padding--small.holder-gray-600
+      p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta cumque, itaque pariatur id provident ad optio voluptates voluptatibus exercitationem, suscipit vero. Asperiores commodi temporibus quis perspiciatis reiciendis officiis molestias sunt facilis voluptate, nemo reprehenderit id amet ab assumenda, veniam delectus.
