@@ -18,5 +18,9 @@
     "p005-messages": {
       "title": "P005 Messages"
     }
+    ,
+    "p006-billings": {
+      "title": "P005 Billings"
+    }
   }
 }

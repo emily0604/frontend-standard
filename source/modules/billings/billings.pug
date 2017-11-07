@@ -1,0 +1,35 @@
+mixin billing-table(data)
+  table.table&attributes(attributes)
+    thead
+      th Title
+      th Status
+      th Date
+      th Payments
+      th Client/Contact
+      th Actions
+    tbody
+      each transaction in data
+        tr
+          td= transaction.title
+          td
+            if (transaction.status === 'Cancel')
+              +button('Cancel').btn-xs.fr-btn-secondary
+            else if (transaction.status === 'Done')
+              +button('Done').btn-xs.fr-btn-primary
+            else if (transaction.status === 'Pending')
+              +button('Pending').btn-xs.btn-danger
+            else if (transaction.status === 'WIP')
+              +button('WIP').btn-xs.btn-info
+            else
+              p= transaction.status
+          td= transaction.date
+          td= transaction.payment
+          td
+            p.font-weight-bold= transaction.client
+            if (transaction.contact !== '')
+              p.small= transaction.contact
+          td
+            a(href='#')
+              +anticon('eye')
+            a(href='#')
+              +anticon('setting')

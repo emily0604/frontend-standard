@@ -1,0 +1,39 @@
+include modules/head/head
+include modules/elements/elements
+include modules/sidebar/sidebar
+include modules/header/header
+include modules/footer/footer
+include modules/billings/billings
+
+doctype html
+html
+  head
+    +head(head.p006-billings)
+
+  body
+    .d-flex
+      +sidebar(sidebar.data)
+
+      main.billings
+        +header-dashboard('Billings')
+          +button-dropdown-split('Export', 'Excel(.xls)', 'PDF (.pdf)', 'JPEG (.jpeg)').btn-sm.fr-btn-primary
+
+        .billings__main-content
+          .billings__btn-group
+            a(href='#').btn.btn-sm.btn--primary-dark
+              +anticon('plus')
+              span.text Transaction
+            a(href='#').btn.btn--secondary-dark.btn-sm
+              +anticon('plus')
+              span.text Client
+          .billings__title.d-flex.align-items-center
+            +button-dropdown('Add', 'anchor', 'btn-adding', '+ Transaction', '+ Client').fr-btn-primary.btn-sm
+            span.title.title--orange-dark.billings__title__text Transaction board
+          .billings__board(id='billing-table')
+            +billing-table(billings.data).table-striped.billing-table
+
+        +footer()
+
+    script(type='text/javascript', src='js/main.js')
+    script
+      | let billingTable = fixedHeadTable(document.getElementById('billing-table'));

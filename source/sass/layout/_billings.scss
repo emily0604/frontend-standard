@@ -1,0 +1,147 @@
+.billings {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+
+  @include respond-to(phone-landscape) {
+    height: auto;
+  }
+
+  &__main-content {
+    padding: 2rem;
+
+    @include respond-to(phone-and-down) {
+      padding: 0 1rem 1rem;
+    }
+
+    @include respond-to(phone-landscape) {
+      padding: 0 1rem 2rem;
+    }
+  }
+
+  &__btn-group {
+
+    @include respond-to(phone-and-down) {
+      display: none;
+    }
+
+    @include respond-to(phone-landscape) {
+      display: none;
+    }
+
+  }
+
+  &__title {
+    margin: 1rem 0;
+
+    a {
+      display: none;
+
+      @include respond-to(phone-and-down) {
+        display: inline-block;
+      }
+
+      @include respond-to(phone-landscape) {
+        display: inline-block;
+      }
+    }
+
+    &__text {
+      @extend .title;
+      @extend .title--orange-dark;
+
+      @include respond-to(phone-and-down) {
+        font-size: 1.55rem;
+        margin-left: auto;
+      }
+
+      @include respond-to(phone-landscape) {
+        font-size: 1.75rem;
+        margin-left: auto;
+      }
+    }
+  }
+
+  &__board {
+    @extend %fr-scroll-bar;
+    height: calc(100vh - #{$header-height} - #{$footer-height} - 10rem);
+    overflow: auto;
+    position: relative;
+
+    @include respond-to(phone-and-down) {
+      height: calc(100vh - #{$header-height} - #{$footer-height} - 5rem);
+    }
+
+    @include respond-to(phone-landscape) {
+      height: 18rem;
+    }
+
+  }
+}
+
+.billing-table {
+  width: 100%;
+
+  table {
+    border-collapse: collapse;
+  }
+
+  thead {
+    th {
+      background-color: $white;
+      padding: 1.5rem .75rem;
+      border-top: 1px solid $gray-500;
+      border-bottom: 1px solid $gray-500;
+
+      &:first-child {
+        border-left: 1px solid $gray-500;
+        border-right: 3px solid $gray-300;
+      }
+    }
+  }
+
+  tr:nth-of-type(odd) {
+    td:first-child {
+      display: flex;
+      align-items: center;
+      white-space: normal;
+      background-color: $gray-200;
+      border-left: 1px solid $gray-500;
+      border-right: 3px solid $gray-300;
+    }
+  }
+
+  tr:nth-of-type(even) {
+    td {
+      background-color: $white;
+    }
+
+    td:first-child {
+      display: flex;
+      align-items: center;
+      white-space: normal;
+      background-color: $white;
+      border-left: 1px solid $gray-500;
+      border-right: 3px solid $gray-300;
+    }
+  }
+
+  tr:last-child {
+    border-bottom: 1px solid $gray-500;
+  }
+
+  td {
+    height: 6rem;
+    vertical-align: middle;
+  }
+
+  .anticon {
+    font-size: 1.25rem;
+    color: $gray-secondary;
+    margin-right: .5rem;
+  }
+}
+
+

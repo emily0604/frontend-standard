@@ -16,6 +16,9 @@
       },{
         "title": "Messages",
         "url": "p005-messages"
+      },{
+        "title": "Billings",
+        "url": "p006-billings"
       }
     ]
   }
