@@ -1,0 +1,161 @@
+{
+  "userInfo": {
+    "data": {
+      "avatar": "user-avatar.png",
+      "firstName": "Emily",
+      "lastName": "Doe",
+      "title": "Leader"
+    }
+  },
+  "peopleBlocks": {
+    "data": [
+      {
+        "avatar": "user-avatar1.png",
+        "firstName": "Fancy",
+        "lastName": "Doe",
+        "title": "Designer",
+        "timestamp": "09:22",
+        "status": "online",
+        "unread": "05",
+        "messageHistory": {
+          "total": "1245",
+          "messages": [
+            {
+              "type": "out",
+              "time": "09:15",
+              "contents": [
+                "Hi!!! How are you today…",
+                "I got some updates for the design"
+              ]
+            },
+            {
+              "type": "in",
+              "time": "09:16",
+              "contents": [
+                "Hey!!! I’m fine! Please forward me. I need your information"
+              ]
+            },
+            {
+              "type": "out",
+              "time": "09:16",
+              "contents": [
+                "Sure!",
+                "Let’s take a look and let me know if you need any further support."
+              ]
+            },
+            {
+              "type": "in",
+              "time": "09:17",
+              "contents": [
+                "Of course, I will"
+              ]
+            },
+            {
+              "type": "out",
+              "time": "09:18",
+              "contents": [
+                "Lorem ipsum dolor sit amet."
+              ]
+            },
+            {
+              "type": "in",
+              "time": "09:20",
+              "contents": [
+                "Lorem ipsum dolor sit amet, consectetur adipisicing elit."
+              ]
+            },
+            {
+              "type": "out",
+              "time": "09:22",
+              "contents": [
+                "Lorem ipsum dolor sit amet, consectetur adipisicing elit",
+                "Quibusdam alias, quae amet aliquid minima consequuntur."
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "avatar": "user-avatar-male1.png",
+        "firstName": "Mike",
+        "lastName": "Doe",
+        "title": "Designer",
+        "timestamp": "10:15",
+        "status": "online",
+        "unread": "03"
+      },
+      {
+        "avatar": "user-avatar3.png",
+        "firstName": "Rosy",
+        "lastName": "Doe",
+        "title": "Team leader",
+        "timestamp": "17:20",
+        "status": "online"
+        },
+      {
+        "avatar": "user-avatar4.png",
+        "firstName": "Lisa",
+        "lastName": "Doe",
+        "title": "Comtor",
+        "timestamp": "20:12",
+        "status": "online"
+        },
+      {
+        "avatar": "user-avatar-male2.png",
+        "firstName": "Daniel",
+        "lastName": "Doe",
+        "title": "Developer",
+        "timestamp": "21:00",
+        "status": "offline"
+      },
+      {
+        "avatar": "user-avatar-male3.png",
+        "firstName": "Micheal",
+        "lastName": "Doe",
+        "title": "CEO",
+        "timestamp": "22:00",
+        "status": "offline"
+      },
+      {
+        "avatar": "user-avatar5.png",
+        "firstName": "Quincy",
+        "lastName": "Doe",
+        "title": "Developer",
+        "timestamp": "25th, Oct",
+        "status": "offline"
+      },
+      {
+        "avatar": "user-avatar-male4.png",
+        "firstName": "Mick",
+        "lastName": "Doe",
+        "title": "Trainer",
+        "timestamp": "25th, Oct",
+        "status": "offline"
+      },
+      {
+        "avatar": "user-avatar-male5.png",
+        "firstName": "Phill",
+        "lastName": "Doe",
+        "title": "Intern",
+        "timestamp": "25th, Oct",
+        "status": "offline"
+      },
+      {
+        "avatar": "user-avatar6.png",
+        "firstName": "Grace",
+        "lastName": "Doe",
+        "title": "Intern",
+        "timestamp": "25th, Oct",
+        "status": "offline"
+      },
+      {
+        "avatar": "user-avatar7.png",
+        "firstName": "Lizz",
+        "lastName": "Doe",
+        "title": "Intern",
+        "timestamp": "26th, Oct",
+        "status": "offline"
+      }
+    ]
+  }
+}

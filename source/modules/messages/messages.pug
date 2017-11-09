@@ -1,0 +1,85 @@
+include ../header/header
+include ../footer/footer
+
+mixin people-blocks(data)
+  .messages__people-blocks
+    each people in data
+      .people-block
+        .people-block__user-avatar
+          img(src=`images/${people.avatar}`).img-fluid
+
+        if people.status === 'online'
+          span.people-block__status.people-block__status--online
+        if people.status === 'offline'
+          span.people-block__status.people-block__status--offline
+
+        .people-block__info
+          .people-block__info-main
+            if people.unread
+              span.people-block__badge.badge= people.unread
+
+            .w-100.d-flex
+              p.people-block__first-name.lead= people.firstName
+                span.people-block__last-name.lead= people.lastName
+
+            p.people-block__title.font-weight-light= people.title
+          p.people-block__timestamp= people.timestamp
+
+
+mixin message-about(data)
+  .message-about
+    .message-about__user-avatar
+      img(src=`images/${data.avatar}`).img-fluid
+    .d-flex.flex-column
+      p Message to
+        span.lead= data.firstName
+      if data.messageHistory
+        p.small= data.messageHistory.total
+          span messages
+      else
+        p.small Start a conversation with #{data.firstName} #{data.lasttName}
+    +anticon('staro').lead.ml-auto
+    a.messages__sidebar__toggle-btn(href='#')
+      +anticon('menuunfold')
+
+mixin message-out(user, data)
+  .message-out
+    .d-flex.flex-column.align-items-end
+      p.font-weight-light= data.time
+        span.font-weight-bold= user.firstName
+      each content in data.contents
+        p.bubble.bubble--out= content
+    .message-out__user-avatar
+      img(src=`images/${user.avatar}`).img-fluid
+
+mixin message-in(people, data)
+  .message-in
+    .message-in__user-avatar
+      img(src=`images/${people.avatar}`).img-fluid
+    .d-flex.flex-column
+      p.font-weight-bold= people.firstName
+        span.font-weight-light= data.time
+      each content in data.contents
+        p.bubble.bubble--in= content
+
+mixin message-history(user, people)
+  +message-about(people)
+  if people.messageHistory
+    .message-field
+      each message in people.messageHistory.messages
+        if (message.type === 'out')
+          +message-out(user, message)
+        if (message.type === 'in')
+          +message-in(people, message)
+
+mixin message-chatbox()
+  .message-chatbox
+    a(href='#').lead
+      +anticon('smileo')
+    +input()(placeholder='Type your message...')
+    a(href='#').lead
+      +anticon('paperclip')
+    a(href='#').btn.fr-btn-primary.btn-sm.message-chatbox__btn
+      i(class='fa fa-paper-plane' aria-hidden="true")
+
+

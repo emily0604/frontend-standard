@@ -2,11 +2,23 @@
   font-weight: $font-weight-light;
   text-transform: uppercase;
   letter-spacing: .3rem;
-  margin: .25rem;
 
   @include respond-to(smallphone-and-down) {
     padding-top: .5rem;
     padding-bottom: .5rem;
+  }
+}
+
+.btn-transparent {
+  background-color: none;
+  border: 0;
+
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: none;
+    border: 0;
+    box-shadow: none;
   }
 }
 

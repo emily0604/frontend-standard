@@ -6,9 +6,81 @@
   flex: 0 0 $sidebar-width;
   transition: transform .5s ease-in-out;
   background: $sidebar-bg-color;
+  position: relative;
 
   @include respond-to(tablet-and-down) {
+    position: absolute;
+    z-index: 3;
+    transform: translateX(-$sidebar-width);
+  }
+
+  &--off {
     flex: 0 0 $sidebar-width-collapsed;
+    transition: transform .5s ease-in-out;
+
+    @include respond-to(tablet-and-down) {
+      width: $sidebar-width;
+      transform: translateX(0);
+    }
+
+    .sidebar__user-avatar a {
+      width: 3.75rem;
+      height: 3.75rem;
+
+      @include respond-to(tablet-and-down) {
+        width: 6.88rem;
+        height: 6.88rem;
+      }
+    }
+
+    .sidebar__user-name,
+    .sidebar__user-title,
+    .sidebar__nav__text {
+      display: none;
+
+      @include respond-to(tablet-and-down) {
+        display: block;
+      }
+    }
+
+    .sidebar__footer a {
+      min-width: 2rem;
+      background-image: url('#{$path-to-images}fram-io-logo--white.png');
+
+      @include respond-to(tablet-and-down) {
+        min-width: 10rem;
+        background-image: url('#{$path-to-images}fram-io-logo--text-white.png');
+      }
+    }
+
+    .sidebar__nav__link {
+      display: block;
+      font-size: 1.5rem;
+
+      @include respond-to(tablet-and-down) {
+        display: flex;
+        font-size: 1.25rem;
+      }
+    }
+
+    .sidebar__nav__badge {
+      font-size: .7rem;
+      margin-left: 0;
+      position: absolute;
+      top: .5rem;
+      right: .65rem;
+
+      @include respond-to(tablet-and-down) {
+        font-size: 1rem;
+        margin-left: auto;
+      }
+    }
+
+    .sidebar--off__close-btn {
+      @include respond-to(tablet-and-down) {
+        display: block;
+      }
+    }
   }
 
   &__user-avatar {
@@ -21,11 +93,6 @@
       height: 6.88rem;
       border-radius: 50%;
       background: url('#{$path-to-images}user-avatar.png') no-repeat center center;
-
-      @include respond-to(tablet-and-down) {
-        width: 3.75rem;
-        height: 3.75rem;
-      }
     }
   }
 
@@ -34,19 +101,11 @@
     font-weight: $font-weight-light;
     color: $white;
     font-size: 1.75rem;
-
-    @include respond-to(tablet-and-down) {
-      display: none;
-    }
   }
 
   &__user-title {
     color: $orange-dark;
     font-size: 1.13rem;
-
-    @include respond-to(tablet-and-down) {
-      display: none;
-    }
   }
 
   &__footer {
@@ -62,11 +121,6 @@
       background-size: contain;
       min-width: 10rem;
       height: 2.25rem;
-
-      @include respond-to(tablet-and-down) {
-        min-width: 2rem;
-        background-image: url('#{$path-to-images}fram-io-logo--white.png');
-      }
     }
   }
 
@@ -110,20 +164,11 @@
     font-size: 1.25rem;
     display: flex;
     align-items: center;
-
-    @include respond-to(tablet-and-down) {
-      display: block;
-      font-size: 1.5rem;
-    }
   }
 
 
   &__text {
     margin-left: .75rem;
-
-    @include respond-to(tablet-and-down) {
-      display: none;
-    }
   }
 
   &__badge {
@@ -132,13 +177,14 @@
     font-size: 1rem;
     font-weight: $font-weight-normal;
     margin-left: auto;
-
-    @include respond-to(tablet-and-down) {
-      font-size: .7rem;
-      margin-left: 0;
-      position: absolute;
-      top: .5rem;
-      right: .65rem;
-    }
   }
+}
+
+.sidebar--off__close-btn {
+  display: none;
+  position: absolute;
+  font-size: 1.5rem;
+  color: $white;
+  right: .35rem;
+  top: .1rem;
 }

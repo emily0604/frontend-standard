@@ -6,6 +6,7 @@
 
 @import 'vendors/bootstrap-override-variable';
 @import 'node_modules/bootstrap/scss/bootstrap';
+@import 'node_modules/font-awesome/scss/font-awesome';
 
 @import 'base/typography';
 @import 'base/colors';
@@ -21,6 +22,7 @@
 @import 'layout/sidebar';
 @import 'layout/style-guide';
 @import 'layout/user-profile';
+@import 'layout/messages';
 
 @import 'components/ui-elements';
 @import 'components/navigation-tab';
@@ -28,5 +30,6 @@
 @import 'components/block';
 @import 'components/buttons';
 @import 'components/forms';
+@import 'components/dropdowns';
 
 @import 'pages/p001-login';
